@@ -1,0 +1,120 @@
+.app {
+    // .app__heading
+    &__heading {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        background-color: var(--text-color);
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 10;
+
+        @media (min-width: 992px) {
+            padding: 20px 30px;
+        }
+    }
+
+    // .app__list
+    &__list {
+        padding: 64px 20px;
+        display: grid;
+        justify-content: center;
+        max-width: 1400px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 10px;
+
+        @media (min-width: 450px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        @media (min-width: 992px) {
+            grid-template-columns: repeat(4, 1fr);
+            padding: 84px 20px;
+        }
+
+        // .app__list-item
+        &-item {
+            background-color: #fff;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        // .app__list-header
+        &-header {
+            background-color: var(--secondary-color);
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                background-color: rgba(217, 220, 227, 0.55);
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        // .app__list-image
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        // .app__list-title
+        &-title {
+            padding: 20px 0;
+        }
+
+        // .app__list-icons
+        &-icons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-top: auto;
+            justify-content: flex-end;
+        }
+    }
+
+    // .app__loading
+    &__loading {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        // .app__loading-title
+        &-title {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 500;
+        }
+    }
+}
